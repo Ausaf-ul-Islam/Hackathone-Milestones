@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2 class="header-txt">Dynamic Resume Builder By Ausaf UL Islam</h2>
+<!-- Resume Form -->
+<div class="form-container">
+    <h1>Resume Form</h1>
+    <form id="resumeForm">
+        <label for="profilePicInput">Profile Picture:</label>
+        <input type="file" id="profilePicInput" name="profilePicInput" accept="image/*">
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="education">Education:</label>
+        <textarea id="education" name="education" rows="4" required></textarea>
+
+        <label for="workExperience">Work Experience:</label>
+        <textarea id="workExperience" name="workExperience" rows="4" required></textarea>
+
+        <!-- Skills Section -->
+        <label for="skills">Skills:</label>
+        <div id="skillsContainer">
+            <input type="text" id="skills" name="skills[]" required>
+        </div>
+
+        <!-- Certifications Section -->
+        <label for="certifications">Certifications:</label>
+        <div id="certificationsContainer">
+            <input type="text" id="certifications" name="certifications[]" required>
+        </div>
+
+        <!-- Projects Section -->
+        <label for="projects">Projects:</label>
+        <div id="projectsContainer">
+            <input type="text" id="projects" name="projects[]" required>
+        </div>
+
+        <button type="submit">Generate Resume</button>
+    </form>
+</div>
+
+<!-- Resume Output -->
+<div id="resumeOutput" class="container" style="display: none;">
+    <!-- Resume Header -->
+    <div class="resume-header">
+        <img id="outputProfilePic" src="" alt="Profile Picture">
+        <h1 id="outputName">Full Name</h1>
+        <p id="outputEmail">Email: example@example.com</p>
+        <p id="outputPhone">Phone: +000-000-0000</p>
+    </div>
+
+    <!-- Education Section -->
+    <section class="resume-section">
+        <h2>Education</h2>
+        <p id="outputEducation">Education details will be displayed here.</p>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section class="resume-section">
+        <h2>Work Experience</h2>
+        <p id="outputWorkExperience">Work experience details will be displayed here.</p>
+    </section>
+
+    <!-- Skills Section (with a button to toggle visibility) -->
+    <section class="resume-section">
+        <h2>Skills</h2>
+        <ul id="outputSkills"></ul>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="resume-section">
+        <h2>Certifications</h2>
+        <ul id="outputCertifications"></ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="resume-section">
+        <h2>Projects</h2>
+        <ul id="outputProjects"></ul>
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

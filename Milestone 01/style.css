@@ -1,0 +1,259 @@
+/* General Dark Theme Styles */
+/* Prevent Horizontal Scrolling */
+html, body {
+    overflow-x: hidden;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light gray text for readability */
+}
+::selection{
+    text-shadow: 0 0 1rem #00FF88;
+}
+.header-txt{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    color: #00FF88;
+    text-shadow: 0 0 10px #00FF88;
+}
+/* Container */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #1e1e1e; /* Dark gray container */
+    border-radius: 10px;
+    border: 2px solid #00FF88; /* Ensure border visibility */
+    box-sizing: border-box;
+    box-shadow: 0 0 .6rem #00FF88;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Resume Header */
+.resume-header {
+    text-align: center;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.resume-header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid  #00FF88; /* Neon green border for emphasis */
+    box-shadow: 0 0 .6rem #00FF88;
+}
+
+.resume-header h1 {
+    margin: 1rem 0 0.5rem 0;
+    font-size: 2.5rem;
+    color: #FFFFFF; /* White text for headings */
+}
+
+.resume-header p {
+    margin: 0.5rem 0;
+    color: #b0b0b0; /* Light gray for subtitles */
+    font-size: 1.2rem;
+}
+
+/* Resume Sections */
+.resume-section {
+    margin-bottom: 2.5rem;
+}
+
+.resume-section h2 {
+    font-size: 1.8rem;
+    color: #00FF88; /* Neon green for section headers */
+    border-bottom: 2px solid #00FF88;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.resume-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #00FF88; /* Neon green accent bar */
+    border-radius: 5px;
+}
+
+.resume-section p {
+    font-size: 1.1rem;
+    color: #e0e0e0; /* Light gray text for the dark background */
+    line-height: 1.6;
+}
+
+/* Skills Section */
+#skills {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+#skills li {
+    background-color: #2a2a2a; /* Darker gray for skill items */
+    color: #00FF88; /* Neon green text for skills */
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Deeper shadow for dark mode */
+    transition: all 0.2s ease-in-out;
+}
+
+#skills li:hover {
+    background-color: #383838; /* Slightly lighter gray on hover */
+    transform: translateY(-3px);
+}
+
+/* Buttons */
+button {
+    background-color: transparent; 
+    border: 2px solid #00FF88;
+    box-shadow: 0 0 .6rem #00FF88;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: transparent; 
+    box-shadow: none;
+    transform: translateY(-2px);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Toggle Button for Sections */
+#toggleSkillsBtn, #toggleWorkBtn {
+    display: block;
+    margin: 1rem 0;
+}
+
+/* Transitions for smooth section toggle */
+.resume-section {
+    transition: all 0.3s ease;
+}
+
+#skills, #workExperience {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* Certifications and Projects Section */
+.resume-section ul {
+    list-style-type: disc; /* Disc bullet points */
+    padding-left: 2rem;
+}
+
+.resume-section ul li {
+    background-color: #2a2a2a; /* Darker gray for certification and project items */
+    color: #e0e0e0; /* Light gray text */
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 0.5rem rgba(0, 255, 136, 0.3); /* Neon green soft shadow */
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for list items */
+.resume-section ul li:hover {
+    background-color: #383838; /* Slightly lighter gray on hover */
+    box-shadow: 0 0 0.6rem rgba(0, 255, 136, 0.5); /* Neon green glow on hover */
+    transform: translateY(-4px); /* Lift effect */
+    color: #00FF88; /* Neon green text on hover */
+}
+
+/* Certifications and Projects Titles */
+#certifications h2, #projects h2 {
+    color: #00FF88; /* Neon green for section titles */
+    border-bottom: 2px solid #00FF88;
+    padding-bottom: 0.5rem;
+}
+
+#certifications ul, #projects ul {
+    padding-left: 2rem;
+}
+
+/* Projects section specific styling */
+#projects ul li {
+    background-color: #1e1e1e; /* Darker background for projects */
+    border-left: 3px solid #00FF88; /* Neon green line on the left of project items */
+}
+/* Responsive Container for Medium Devices (Max Width: 900px) */
+@media (max-width: 900px) {
+    .container {
+        width: 90%;
+        margin: 4rem auto;
+        padding: 1.5rem;
+    }
+}
+
+/* Responsive Container for Tablets (Max Width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        width: 88%;
+        margin: 3.5rem auto;
+        padding: 1.2rem;
+    }
+}
+
+/* Responsive Container for Small Devices (Max Width: 600px) */
+@media (max-width: 600px) {
+    .container {
+        width: 85%;
+        margin: 3rem auto;
+        padding: 1rem;
+        border-width: 1.5px; /* Slightly thinner border for smaller screens */
+    }
+}
+
+/* Responsive Container for Mini Devices (Max Width: 480px) */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        margin: 2.5rem auto;
+        padding: 1rem;
+        border-width: 1.5px;
+    }
+}
+
+/* Responsive Container for Extra Small Devices (Max Width: 360px) */
+@media (max-width: 360px) {
+    .container {
+        width: 95%;
+        margin: 2rem auto;
+        padding: 0.8rem;
+        border-width: 1.5px;
+        font-size: 0.9rem; /* Slight reduction in font size */
+    }
+}
+
+/* Responsive Container for Very Small Devices (Max Width: 320px) */
+@media (max-width: 320px) {
+    .container {
+        width: 100%;
+        margin: 1.5rem auto;
+        padding: 0.6rem;
+        font-size: 0.8rem; /* Further reduction in font size */
+        border-width: 1px; /* Thinner border for tiny screens */
+    }
+}
